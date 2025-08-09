@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ammar Souchon – Portfolio Parcours C (S5-S6)</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { primary:{DEFAULT:'#2563EB',light:'#3B82F6',dark:'#1D4ED8'} },
+          fontFamily: { sans:['Inter','system-ui','sans-serif'] }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    .reveal{opacity:0;transform:translateY(40px);transition:all .6s ease}
+    .reveal.visible{opacity:1;transform:none}
+    .chip{display:inline-block;font-size:.70rem;padding:.2rem .5rem;border:1px solid rgba(255,255,255,.1);border-radius:.5rem;background:rgba(37,99,235,.08)}
+    .accent-title{position:relative;padding-left:1rem}
+    .accent-title::before{content:'';position:absolute;left:0;top:.1rem;height:1.2rem;width:4px;background:#2563EB;border-radius:4px}
+  </style>
+</head>
+<body class="bg-gray-950 text-gray-100 font-sans selection:bg-primary selection:text-white scroll-smooth">
+
+<!-- ────── Navbar ────── -->
+<header class="fixed inset-x-0 top-0 z-50 backdrop-blur bg-gray-950/60 border-b border-gray-800">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+    <h1 class="text-lg font-bold tracking-wide"><span class="text-primary">Ammar</span> Souchon</h1>
+
+    <nav class="hidden md:flex gap-8 text-sm">
+      <a href="#accueil"         class="hover:text-primary">Accueil</a>
+      <a href="#comp4"           class="hover:text-primary">Compétence 4</a>
+      <a href="#comp5"           class="hover:text-primary">Compétence 5</a>
+      <a href="#comp6"           class="hover:text-primary">Compétence 6</a>
+      <a href="#contact"         class="hover:text-primary">Contact</a>
+    </nav>
+
+    <button id="menuBtn" class="md:hidden p-2 rounded hover:bg-gray-800/50" aria-controls="mobileMenu" aria-expanded="false" aria-label="Ouvrir le menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </div>
+
+  <div id="mobileMenu" class="md:hidden hidden px-4 pb-4">
+    <a href="#accueil" class="block py-1 hover:text-primary">Accueil</a>
+    <a href="#comp4"   class="block py-1 hover:text-primary">Compétence 4</a>
+    <a href="#comp5"   class="block py-1 hover:text-primary">Compétence 5</a>
+    <a href="#comp6"   class="block py-1 hover:text-primary">Compétence 6</a>
+    <a href="#contact" class="block py-1 hover:text-primary">Contact</a>
+  </div>
+</header>
+
+<!-- ────── Hero ────── -->
+<section id="accueil" class="pt-32 pb-24 text-center max-w-3xl mx-auto px-4 reveal">
+  <img src="images/ammar.jpg" alt="Photo d’Ammar" class="mx-auto mb-6 rounded-full ring-4 ring-primary/60 shadow-lg" />
+  <h2 class="text-3xl md:text-4xl font-bold mb-4">
+    Administrer, fiabiliser, <span class="text-primary">valoriser les données</span>
+  </h2>
+  <p class="text-gray-400 leading-relaxed">
+    Étudiant en 3<sup>e</sup> année de BUT Informatique – <strong>Parcours C</strong>. J’automatise, j’assure la qualité et je mets en production des services orientés données.
+  </p>
+  <div class="mt-8 flex flex-wrap justify-center gap-4">
+    <a href="#comp4" class="px-6 py-3 bg-primary hover:bg-primary-light rounded-lg font-medium transition">Parcourir les UE</a>
+    <a href="#contact" class="px-6 py-3 border border-primary rounded-lg font-medium hover:bg-primary-dark/20 transition">Me contacter</a>
+  </div>
+</section>
+
+<!-- ──────────────── Compétence 4 ──────────────── -->
+<section id="comp4" class="py-20 bg-gray-900/60 reveal">
+  <div class="max-w-6xl mx-auto px-4">
+    <h3 class="text-2xl md:text-3xl font-semibold mb-10 text-primary">Compétence 4 : Administrer des SI communicants complexes</h3>
+
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <p class="mb-4 text-gray-300">
+          <span class="font-medium">Objectif.</span> Garantir la disponibilité, la qualité et la sécurité des données : administration SQL/NoSQL, haute disponibilité, sauvegardes/réplication, conformité RGPD et conduite du changement.
+        </p>
+
+        <p class="accent-title text-sm text-gray-400 mb-2">SAÉ clés</p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="chip">SAÉ 5.C.01</span>
+          <span class="chip">SAÉ 6.Admin.01</span>
+        </div>
+
+        <p class="accent-title text-sm text-gray-400 mb-2">Ressources (S5)</p>
+        <div class="flex flex-wrap gap-2 mb-3">
+          <span class="chip">R5.C.02</span><span class="chip">R5.C.04</span><span class="chip">R5.C.05</span><span class="chip">R5.C.06</span>
+          <span class="chip">R5.C.07</span><span class="chip">R5.C.08</span><span class="chip">R5.C.09</span><span class="chip">R5.C.11</span>
+          <span class="chip">R5.C.12</span><span class="chip">R5.C.13</span>
+        </div>
+        <p class="accent-title text-sm text-gray-400 mb-2">Ressources (S6)</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="chip">R6.C.04</span><span class="chip">R6.C.05</span><span class="chip">R6.C.06</span>
+        </div>
+
+        <a href="competence4.html" class="inline-block mt-6 px-5 py-2 bg-primary hover:bg-primary-light rounded-lg text-sm font-medium transition">Voir la page complète</a>
+      </div>
+
+      <img src="images/acueil_C4.png" alt="Architecture / administration" class="rounded-lg shadow-md border border-gray-700">
+    </div>
+  </div>
+</section>
+
+<!-- ──────────────── Compétence 5 ──────────────── -->
+<section id="comp5" class="py-20 bg-gray-950 reveal">
+  <div class="max-w-6xl mx-auto px-4">
+    <h3 class="text-2xl md:text-3xl font-semibold mb-10 text-primary">Compétence 5 : Gérer des données de l’information</h3>
+
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <img src="images/acueil_C5.png" alt="Schéma data/BD" class="rounded-lg shadow-md border border-gray-700 order-last md:order-first">
+
+      <div>
+        <p class="mb-4 text-gray-300">
+          <span class="font-medium">Objectif.</span> Collecter, modéliser et préparer la donnée, l’exploiter (BI/IA) et <strong>industrialiser</strong> les systèmes (SQL/NoSQL) pour le décisionnel.
+        </p>
+
+        <p class="accent-title text-sm text-gray-400 mb-2">SAÉ clés</p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="chip">SAÉ 5.Admin.01</span>
+          <span class="chip">SAÉ 6.Admin.01</span>
+        </div>
+
+        <p class="accent-title text-sm text-gray-400 mb-2">Ressources (S5)</p>
+        <div class="flex flex-wrap gap-2 mb-3">
+          <span class="chip">R5.C.02</span><span class="chip">R5.C.04</span><span class="chip">R5.C.05</span>
+          <span class="chip">R5.C.11</span><span class="chip">R5.C.12</span><span class="chip">R5.C.13</span>
+        </div>
+        <p class="accent-title text-sm text-gray-400 mb-2">Ressources (S6)</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="chip">R6.C.04</span><span class="chip">R6.C.05</span><span class="chip">R6.C.06</span>
+        </div>
+
+        <a href="competence5.html" class="inline-block mt-6 px-5 py-2 bg-primary hover:bg-primary-light rounded-lg text-sm font-medium transition">Voir la page complète</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ──────────────── Compétence 6 ──────────────── -->
+<section id="comp6" class="py-20 bg-gray-900/60 reveal">
+  <div class="max-w-6xl mx-auto px-4">
+    <h3 class="text-2xl md:text-3xl font-semibold mb-10 text-primary">Compétence 6 : Mettre à disposition un service informatique</h3>
+
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <p class="mb-4 text-gray-300">
+          <span class="font-medium">Objectif.</span> Piloter un produit du besoin au déploiement : backlog, itérations, <strong>CI/CD</strong>, tests, conformité (droit/PI/RGPD), documentation et support.
+        </p>
+
+        <p class="accent-title text-sm text-gray-400 mb-2">SAÉ clés</p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="chip">SAÉ 5 : Conduite d’un projet SI</span>
+          <span class="chip">SAÉ 6 : Mise à disposition d’un service</span>
+        </div>
+
+        <p class="accent-title text-sm text-gray-400 mb-2">Ressources (S5)</p>
+        <div class="flex flex-wrap gap-2 mb-3">
+          <span class="chip">R5.C.02</span><span class="chip">R5.C.11</span>
+          <span class="chip">R5.C.12</span><span class="chip">R5.C.13</span>
+        </div>
+        <p class="accent-title text-sm text-gray-400 mb-2">Ressources (S6)</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="chip">R6.C.01</span><span class="chip">R6.C.02</span>
+          <span class="chip">R6.C.03</span><span class="chip">R6.C.04</span>
+        </div>
+
+        <a href="competence6.html" class="inline-block mt-6 px-5 py-2 bg-primary hover:bg-primary-light rounded-lg text-sm font-medium transition">Voir la page complète</a>
+      </div>
+
+      <img src="images/acueil_C6.png" alt="Service / CI-CD" class="rounded-lg shadow-md border border-gray-700">
+    </div>
+  </div>
+</section>
+
+<!-- ──────────────── Contact ──────────────── -->
+<section id="contact" class="py-16 bg-gray-950 reveal">
+  <div class="max-w-lg mx-auto px-4 text-center">
+    <h3 class="text-2xl font-semibold mb-4">Contact</h3>
+    <p class="text-gray-400 mb-6">Intéressé·e par mon profil ? Écrivez-moi !</p>
+    <a href="mailto:ammar.souchon@gmail.com" class="inline-block px-8 py-3 bg-primary hover:bg-primary-light rounded-lg font-medium transition">Envoyer un e-mail</a>
+
+    <div class="mt-6 flex justify-center gap-4">
+      <a href="https://www.linkedin.com/in/ammar-souchon-7350b9352/" target="_blank" class="hover:text-primary" aria-label="LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4v12h-4V8zm7.5 0h3.6v1.71h.05c.5-.95 1.7-1.95 3.5-1.95 3.75 0 4.45 2.46 4.45 5.63V20h-3.98v-5.6c0-1.33-.02-3.05-1.86-3.05-1.86 0-2.15 1.45-2.15 2.95V20H8V8z"/></svg>
+      </a>
+      <a href="https://github.com/AmmarSo" target="_blank" class="hover:text-primary" aria-label="GitHub">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.6.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2.2c-3.2.7-3.9-1.5-3.9-1.5-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.9 1.2 1.9 1.2 1.1 1.9 2.9 1.4 3.6 1.1.1-.8.4-1.4.7-1.7-2.6-.3-5.3-1.3-5.3-5.9 0-1.3.5-2.4 1.2-3.3-.1-.3-.5-1.6.1-3.3 0 0 1-.3 3.4 1.2 1-.3 2.1-.4 3.1-.4s2.1.1 3.1.4c2.4-1.5 3.4-1.2 3.4-1.2.6 1.7.2 3 .1 3.3.8.9 1.2 2 1.2 3.3 0 4.6-2.7 5.6-5.3 5.9.4.3.8 1 .8 2v3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.6 18.4.5 12 .5z"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="py-6 text-center text-sm text-gray-500 bg-gray-900/80">
+  © 2025 Ammar Souchon : Tous droits réservés.
+</footer>
+
+<!-- reveal + menu -->
+<script>
+  const observer=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.1});
+  document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+  const btn=document.getElementById('menuBtn'),menu=document.getElementById('mobileMenu');
+  btn.addEventListener('click',()=>{const open=menu.classList.toggle('hidden')===false;btn.setAttribute('aria-expanded',String(open));});
+</script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compétence 5 – Ammar Souchon</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors:{primary:{DEFAULT:'#2563EB',light:'#3B82F6',dark:'#1D4ED8'}},
+          fontFamily:{sans:['Inter','system-ui','sans-serif']}
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    .reveal{opacity:0;transform:translateY(40px);transition:all .6s ease}
+    .reveal.visible{opacity:1;transform:none}
+    .accent-title{position:relative;padding-left:1.25rem}
+    .accent-title::before{content:'';position:absolute;left:0;top:0;height:100%;width:4px;background:#2563EB}
+  </style>
+</head>
+<body class="bg-gray-950 text-gray-100 font-sans selection:bg-primary selection:text-white scroll-smooth">
+
+<!-- ───── Navbar ───── -->
+<header class="fixed inset-x-0 top-0 z-50 backdrop-blur bg-gray-950/60 border-b border-gray-800">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+    <h1 class="text-lg font-bold tracking-wide">
+      <a href="index.html"><span class="text-primary">Ammar</span> Souchon</a>
+    </h1>
+    <nav class="hidden md:flex gap-8 text-sm">
+      <a href="index.html#accueil" class="hover:text-primary">Accueil</a>
+      <a href="#objectif" class="hover:text-primary">Objectifs</a>
+      <a href="#ac" class="hover:text-primary">AC</a>
+      <a href="#ressources" class="hover:text-primary">Ressources</a>
+      <a href="#sae" class="hover:text-primary">SAÉ</a>
+      <a href="#alternance" class="hover:text-primary">Alternance</a>
+      <a href="index.html#contact" class="hover:text-primary">Contact</a>
+    </nav>
+    <button id="menuBtn" class="md:hidden p-2 rounded hover:bg-gray-800/50" aria-controls="mobileMenu" aria-expanded="false" aria-label="Ouvrir le menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </div>
+  <div id="mobileMenu" class="md:hidden hidden px-4 pb-4">
+    <a href="index.html#accueil" class="block py-1 hover:text-primary">Accueil</a>
+    <a href="#objectif" class="block py-1 hover:text-primary">Objectifs</a>
+    <a href="#ac" class="block py-1 hover:text-primary">AC</a>
+    <a href="#ressources" class="block py-1 hover:text-primary">Ressources</a>
+    <a href="#sae" class="block py-1 hover:text-primary">SAÉ</a>
+    <a href="#alternance" class="block py-1 hover:text-primary">Alternance</a>
+    <a href="index.html#contact" class="block py-1 hover:text-primary">Contact</a>
+  </div>
+</header>
+
+<!-- ───── Hero ───── -->
+<section class="pt-32 pb-20 text-center max-w-3xl mx-auto px-4 reveal">
+  <h2 class="text-3xl md:text-4xl font-bold mb-4">
+    Compétence 5 : <span class="text-primary">Gérer des données de l’information</span>
+  </h2>
+  <p class="text-gray-400 leading-relaxed">
+    Concevoir, préparer, exploiter et <span class="text-primary-light">industrialiser</span> des systèmes de données (SQL &amp; NoSQL) au service du décisionnel.
+  </p>
+</section>
+
+<!-- ───── Objectifs ───── -->
+<section id="objectif" class="py-16 bg-gray-900/60 reveal">
+  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <h3 class="text-2xl font-semibold mb-6 text-primary">Objectifs métiers</h3>
+      <ul class="space-y-3 list-disc list-inside text-gray-300">
+        <li>Modéliser et administrer SGBD relationnels &amp; NoSQL.</li>
+        <li>Construire des pipelines <strong>ETL/ELT</strong> fiables (qualité/traçabilité).</li>
+        <li>Exploiter la donnée (BI, fouille, IA) pour générer de la valeur.</li>
+        <li>Mettre en production et <strong>optimiser</strong> les systèmes de gestion de données.</li>
+      </ul>
+    </div>
+    <img src="images/C5_1.png" alt="Architecture data" class="rounded-lg shadow-md border border-gray-700">
+  </div>
+</section>
+
+<!-- ───── AC (adaptés à la C5) ───── -->
+<section id="ac" class="py-16 bg-gray-950 reveal">
+  <div class="max-w-6xl mx-auto px-4">
+    <h3 class="text-2xl font-semibold mb-10 text-primary">Apprentissages critiques mobilisés</h3>
+    <div class="overflow-x-auto text-sm">
+      <table class="min-w-full border border-gray-700 text-gray-300">
+        <thead class="bg-gray-900/60">
+          <tr class="text-left">
+            <th class="px-3 py-2 font-medium border-b border-gray-700">Code</th>
+            <th class="px-3 py-2 font-medium border-b border-gray-700">Intitulé</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="px-3 py-2 border-b border-gray-800">AC34.01</td><td class="px-3 py-2 border-b border-gray-800">Capturer &amp; stocker des ensembles volumineux et hétérogènes</td></tr>
+          <tr><td class="px-3 py-2 border-b border-gray-800">AC34.02</td><td class="px-3 py-2 border-b border-gray-800">Préparer et extraire les données pour l’exploitation</td></tr>
+          <tr><td class="px-3 py-2 border-b border-gray-800">AC34.03</td><td class="px-3 py-2 border-b border-gray-800">Exploiter les données (BI / fouille / apprentissage)</td></tr>
+          <tr><td class="px-3 py-2">AC34.04</td><td class="px-3 py-2">Mettre en production et optimiser le système de gestion de données</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ───── Ressources (listes imposées) ───── -->
+<section id="ressources" class="py-16 bg-gray-900/60 reveal">
+  <div class="max-w-6xl mx-auto px-4">
+    <h3 class="text-2xl font-semibold mb-10 text-primary">Ressources capitalisées</h3>
+
+    <!-- S5 -->
+    <h4 class="accent-title text-xl font-medium mb-6">Semestre 5</h4>
+    <div class="grid md:grid-cols-2 gap-8 mb-12">
+      <div class="bg-gray-800/40 p-6 rounded-lg"><h5 class="font-semibold text-primary mb-2">R5.C.02 : PPP 5</h5><p class="text-gray-400 text-sm">Positionnement, réseau, outils pro.</p></div>
+      <div class="bg-gray-800/40 p-6 rounded-lg"><h5 class="font-semibold text-primary mb-2">R5.C.04 : Programmation Web décisionnelle</h5><p class="text-gray-400 text-sm">ETL, reporting web, dashboards.</p></div>
+      <div class="bg-gray-800/40 p-6 rounded-lg"><h5 class="font-semibold text-primary mb-2">R5.C.05 : Nouveaux paradigmes BD</h5><p class="text-gray-400 text-sm">Redis, MongoDB, Neo4j…</p></div>
+      <div class="bg-gray-800/40 p-6 rounded-lg"><h5 class="font-semibold text-primary mb-2">R5.C.11 : Optimisation données &amp; SI décisionnels</h5><p class="text-gray-400 text-sm">Qualité, optimisation, gouvernance.</p></div>
+      <div class="bg-gray-800/40 p-6 rounded-lg"><h5 class="font-semibold text-primary mb-2">R5.C.12 : Anglais</h5><p class="text-gray-400 text-sm">Communication technique / TOEIC.</p></div>
+      <div class="bg-gray-800/40 p-6 rounded-lg"><h5 class="font-semibold text-primary mb-2">R5.C.13 : Économie durable &amp; numérique</h5><p class="text-gray-400 text-sm">Sobriété &amp; impacts et réchauffement climatique</p></div>
+    </div>
+
+    <!-- S6 -->
+    <h4 class="accent-title text-xl font-medium mb-6">Semestre 6</h4>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-gray-800/40 p-6 rounded-lg"><h5 class="font-semibold text-primary mb-2">R6.C.04 : PPP 6</h5><p class="text-gray-400 text-sm">Insertion pro, valorisation des compétences.</p></div>
+      <div class="bg-gray-800/40 p-6 rounded-lg"><h5 class="font-semibold text-primary mb-2">R6.C.05 : Administration des bases de données</h5><p class="text-gray-400 text-sm">Rôles, sécurité, sauvegardes, optimisation.</p></div>
+      <div class="bg-gray-800/40 p-6 rounded-lg"><h5 class="font-semibold text-primary mb-2">R6.C.06 : Méthodes d’optimisation pour l’aide à la décision</h5><p class="text-gray-400 text-sm">Méthode du simplexe</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── SAÉ (2) ───── -->
+<section id="sae" class="py-16 bg-gray-950 reveal">
+  <div class="max-w-6xl mx-auto px-4">
+    <h3 class="text-2xl font-semibold mb-10 text-primary">Situations d’apprentissage &amp; d’évaluation</h3>
+
+    <div class="bg-gray-800/40 p-6 rounded-lg shadow-sm mb-8">
+      <h4 class="text-xl font-semibold mb-2 text-primary-light">SAÉ 5.Admin.01 : Proposer une solution optimisée à partir de données internes et externes</h4>
+      <p class="text-gray-400 text-sm mb-4">Pipeline ETL, entrepôt &amp; restitution décisionnelle (AC34.01→34.03).</p>
+      <ul class="list-disc list-inside text-gray-300 text-sm space-y-1">
+        <li>Collecte/Nettoyage multi-sources, qualité/traçabilité.</li>
+        <li>Stockages SQL/NoSQL, tableaux de bord web.</li>
+        <li>Communication et documentation livrables.</li>
+      </ul>
+    </div>
+
+    <div class="bg-gray-800/40 p-6 rounded-lg shadow-sm">
+      <h4 class="text-xl font-semibold mb-2 text-primary-light">SAÉ 6.Admin.01 : Organisation &amp; protection des données</h4>
+      <p class="text-gray-400 text-sm mb-4">Gouvernance, sécurité et conformité en mise en production (AC34.04, AC36.01/36.03).</p>
+      <ul class="list-disc list-inside text-gray-300 text-sm space-y-1">
+        <li>Registre &amp; DPIA, politiques d’accès.</li>
+        <li>Durcissement SGBD, sauvegardes, supervision.</li>
+        <li>Tests, procédures, communication parties prenantes.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ───── Alternance ───── -->
+<section id="alternance" class="py-16 bg-gray-900/60 reveal">
+  <div class="max-w-6xl mx-auto px-4">
+    <h3 class="text-2xl font-semibold mb-6 text-primary">Alternance : Gestion des données d’inventaire (DDFIP 78)</h3>
+    <p class="text-gray-300 text-sm mb-10 max-w-4xl">
+      Référentiel &gt; 4 000 actifs (11 sites) : app Flutter (scan), ETL, qualité et reporting. AC mobilisés : AC34.01→34.04 + AC36.01/36.03.
+    </p>
+    <div class="grid md:grid-cols-2 gap-10 items-start">
+      <div>
+        <h4 class="accent-title font-semibold mb-2">Contributions principales</h4>
+        <ul class="list-disc list-inside text-gray-300 text-sm space-y-1">
+          <li>Application mobile flutter.</li>
+          <li>Scripting pour automatisation de procédures.</li>
+          <li>Tableur Calc avec macro pour automatisation.</li>
+          <li>Modélisation &amp; intégration SIGMA/OCS.</li>
+          <li>Dashboards qualité &amp; procédures d’exploitation.</li>
+          <li>Formation utilisateurs &amp; documentation.</li>
+        </ul>
+      </div>
+      <img src="images/inventaire.png" class="rounded-lg shadow-md border border-gray-700" alt="Application d’inventaire">
+    </div>
+  </div>
+</section>
+
+<footer class="py-6 text-center text-sm text-gray-500 bg-gray-900/80">© 2025 Ammar Souchon : Compétence 5</footer>
+
+<script>
+  const o=new IntersectionObserver(e=>e.forEach(i=>i.isIntersecting&&i.target.classList.add('visible')),{threshold:.1});
+  document.querySelectorAll('.reveal').forEach(el=>o.observe(el));
+  const btn=document.getElementById('menuBtn'), menu=document.getElementById('mobileMenu');
+  btn.addEventListener('click',()=>{const open=menu.classList.toggle('hidden')===false;btn.setAttribute('aria-expanded',String(open));});
+</script>
+</body>
+</html>
